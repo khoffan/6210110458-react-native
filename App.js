@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Weather zipCode="90110"/>
+      <Weather zipCode="11506666"/>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +16,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     paddingTop:25,
+    
   },
 });
