@@ -4,9 +4,10 @@ import { Text , View ,ImageBackground ,StyleSheet} from 'react-native';
 
 export default function Weather(props) { 
     const [forecastInfo , setForecastInfo] = useState({
-        main: '-',
-        description: '-',
-        temp: 0
+        main: 'light',
+        description: 'rain weather',
+        Fahren:80,
+        temp: 25
     })
     return (
         <View>
