@@ -15,7 +15,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor:'gray',
+    textAlignVertical:'top',
     paddingTop:25,
-    
+
   },
 });
