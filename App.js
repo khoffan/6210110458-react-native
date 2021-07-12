@@ -3,9 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const doit = () => {
+    console.log("Hello world console");
+  }
   return (
     <View style={styles.container}>
-      <Text>Hi app Weater !</Text>
+      <Text onPress={doit} >Hi app Weater !</Text>
       <StatusBar style="auto" />
     </View>
   );
