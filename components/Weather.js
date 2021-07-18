@@ -3,6 +3,12 @@ import Forecast from './Forecast';
 import { Text , View ,ImageBackground ,StyleSheet} from 'react-native';
 
 export default function Weather(props) {
+    const [forecastInfo , setForecastInfo] = useState({
+        main: 'MAIN',
+        description: 'description',
+        temp: ' '
+    })
+
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
@@ -20,11 +26,7 @@ export default function Weather(props) {
         }
     }, [props.zipCode])
         
-    const [forecastInfo , setForecastInfo] = useState({
-        main: 'MAIN',
-        description: 'description',
-        temp: ''
-    })
+    
     return (
         <View>
             <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
