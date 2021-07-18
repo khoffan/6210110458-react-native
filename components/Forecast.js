@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text , View ,StyleSheet} from 'react-native';
+import { min } from 'react-native-reanimated';
 
 export default function Forecast(props) {
     return (
@@ -7,6 +8,9 @@ export default function Forecast(props) {
             <Text style={styles.text}>{props.main}</Text>
             <Text style={styles.text}>{props.description}</Text>
             <Text style={styles.text}>{props.temp}</Text>
+            <Text style={styles.text}>{props.tempmin}</Text>
+            <Text style={styles.text}>{props.tempmax}</Text>
+            <Text style={styles.text}>{props.tempmax}</Text>
             <Text style={styles.text}>°C</Text>
         </View>
     );
@@ -17,8 +21,8 @@ const styles = StyleSheet.create({
         margin: 10 ,
         alignItems:'center',
         fontSize: 20,
-        flex:1,
-        flexDirection:'column'
+        flexDirection:'column',
+        backgroundColor:'lightblue'
     },
-     
+
 })
