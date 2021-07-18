@@ -4,9 +4,11 @@ import { Text , View ,ImageBackground ,StyleSheet} from 'react-native';
 
 export default function Weather(props) {
     const [forecastInfo , setForecastInfo] = useState({
-        main: 'MAIN',
+        main: 'loading',
         description: 'description',
-        temp: ' '
+        temp: ' ',
+        tempmin: 0,
+        tempmax: 0
     })
 
     useEffect(() => {
@@ -18,7 +20,10 @@ export default function Weather(props) {
                 setForecastInfo({
                     main: json.weather[0].main,
                     description: json.weather[0].description,
-                    temp: json.main.temp});
+                    temp: json.main.temp,
+                    tempmax: json.main.temp_max,
+                    tempmin: json.main.temp_min,});
+                    
                 })
             .catch((error) => {
                 console.warn(error);
@@ -47,7 +52,8 @@ const styles = StyleSheet.create({
     text:{
         margin: 10 ,
         alignItems:'center',
-        fontSize: 20
+        fontSize: 20,
+        backgroundColor:'lightblue'
     },  
 });
    
