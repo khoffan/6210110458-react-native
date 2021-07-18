@@ -13,6 +13,9 @@ const availableZipItems = [
     { place: 'Yala', code: '95000' },
     { place: 'Surat thani', code: '84000' },
     { place: 'Phuket', code: '83000' },
+    { place: 'Pattani', code: '94000' },
+    { place: 'Narathiwat', code: '96000' },
+    { place: 'Nakhon Ratchasima', code: '30000' },
    ]
    const ZipItem = ({place, code, navigation}) => (
        <TouchableHighlight onPress= {() => {navigation.navigate('Weather', {zipCode: code})}} >
@@ -42,7 +45,8 @@ const styles = StyleSheet.create({
     zipPlace: {
         flex:1,
         backgroundColor:'lightgray',
-        color:'red'
+        color:'red',
+        fontSize:25
     },
     zipCode: {
         flex:1,

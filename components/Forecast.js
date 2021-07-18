@@ -10,7 +10,7 @@ export default function Forecast(props) {
             <Text style={styles.text}>{props.temp}</Text>
             <Text style={styles.text}>{props.tempmin}</Text>
             <Text style={styles.text}>{props.tempmax}</Text>
-            <Text style={styles.text}>{props.tempmax}</Text>
+            <Text style={styles.text}>{props.country}</Text>
             <Text style={styles.text}>°C</Text>
         </View>
     );
