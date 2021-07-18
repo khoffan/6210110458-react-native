@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList,View,Text, } from 'react-native'
+import { FlatList,View,Text } from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 
@@ -13,9 +13,7 @@ const availableZipItems = [
    
 
 const ZipItem = ({place,code,navigation}) =>(
-    <TouchableHighlight onPress={() => {
-        navigation.navigate('Weather',{ZipCode: code})} 
-    }> 
+    <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code})}>
         <View>
             <Text>{place}</Text>
             <Text>{code}</Text>
