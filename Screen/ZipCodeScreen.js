@@ -1,5 +1,5 @@
 import React from "react"
-import { FlatList, Text, TouchableHighlight, View } from "react-native"
+import { FlatList, Text, TouchableHighlight, View ,ImageBackground} from "react-native"
 import { useNavigation } from "@react-navigation/core"
 import { StyleSheet}  from 'react-native'
 const availableZipItems = [
@@ -15,8 +15,8 @@ const availableZipItems = [
     { place: 'Phuket', code: '83000' },
    ]
    const ZipItem = ({place, code, navigation}) => (
-        <TouchableHighlight onPress= {() => {navigation.navigate('Weather', {zipCode: code})}} >
-            <View style={styles.zipItem}>
+       <TouchableHighlight onPress= {() => {navigation.navigate('Weather', {zipCode: code})}} >
+            <View style={styles.zipItem} >
                 <Text style={styles.zipPlace}>{place}</Text>
                 <Text style={styles.zipPlace}>{code}</Text>
             </View>
@@ -46,5 +46,10 @@ const styles = StyleSheet.create({
     },
     zipCode: {
         flex:1,
-    }
+    },
+    backdrop: {
+        alignItems: 'center',
+        width: '100%',
+        height: '100%'
+    },
 });
